@@ -62,6 +62,7 @@ var block_box_timer : bool
 var percent_addition : float
 
 onready var exit_label = self.get_owner().get_node("DialogueBox").get_node("Label")
+onready var player = self.get_owner().get_node("Player")
 
 signal dialogue_exit()
 
@@ -122,6 +123,7 @@ func _input(event):
 				TextBox.text = text[num]
 				to_beginning()
 			elif TextBox.percent_visible == 1:
+				player.player_can_move = true
 				num = 0
 				TextBox.percent_visible = .05
 				hide()
@@ -129,7 +131,6 @@ func _input(event):
 				InputBlocker.start()
 
 func talk(textarray : Array):
-	exit_label.visible = false
 	"""
 	Use this function to activate the DialogueBox
 	"""
@@ -141,6 +142,7 @@ func talk(textarray : Array):
 	to_beginning()
 
 func to_beginning():
+	exit_label.visible = false
 	percent_addition = 1 / float(TextBox.text.length())
 	
 	ShowTimer.wait_time = wait_time
@@ -154,6 +156,7 @@ func to_beginning():
 
 func _on_Timer_timeout():
 	if TextBox.percent_visible < 1:
+		exit_label.visible = false
 		TextBox.percent_visible += percent_addition 
 		audio.play(0)
 	else:

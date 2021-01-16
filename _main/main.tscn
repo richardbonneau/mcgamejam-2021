@@ -326,7 +326,7 @@ transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 5
 [node name="people" type="Spatial" parent="Map"]
 
 [node name="neighbour" parent="Map/people" instance=ExtResource( 26 )]
-transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, 53.2321, 0.255795, 62.2737 )
+transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, 31.0776, 0.255795, -4.94129 )
 
 [node name="oldman" parent="Map/people" instance=ExtResource( 27 )]
 transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, -54.8767, -0.308352, 56.8682 )
@@ -334,6 +334,10 @@ transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, -
 [node name="page" parent="Map" instance=ExtResource( 25 )]
 transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 35.4808, 1.65153, -2.3888 )
 subject = "dont_touch"
+
+[node name="page2" parent="Map" instance=ExtResource( 25 )]
+transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 36.4808, 1.65153, -2.3888 )
+subject = "daughter_help"
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
 anchor_top = 1.0
@@ -351,7 +355,7 @@ __meta__ = {
 message_sound = ExtResource( 8 )
 font = ExtResource( 9 )
 action_name = "ui_select"
-wait_time = 0.07
+wait_time = 0.05
 
 [node name="Label" type="Label" parent="DialogueBox"]
 visible = false
@@ -361,6 +365,6 @@ anchor_bottom = 0.5
 margin_top = -133.992
 margin_bottom = -94.9921
 custom_fonts/font = ExtResource( 9 )
-text = "Press SPACE to exit"
+text = "Press SPACE"
 align = 1
 [connection signal="dialogue_exit" from="DialogueBox" to="." method="_on_DialogueBox_dialogue_exit"]

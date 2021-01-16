@@ -1,6 +1,6 @@
 extends KinematicBody
 
-onready var player_can_move = false
+onready var player_can_move = true
 
 var mouse_sensitivity = 1
 
