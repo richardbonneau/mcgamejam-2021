@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -16,11 +16,19 @@
 [ext_resource path="res://transmission_tower/electricbox.tscn" type="PackedScene" id=14]
 [ext_resource path="res://containment-cell/containment-cell.tscn" type="PackedScene" id=15]
 [ext_resource path="res://containment-cell/numpad.tscn" type="PackedScene" id=16]
+[ext_resource path="res://logcabin/commode-lit.tscn" type="PackedScene" id=17]
+[ext_resource path="res://logcabin/bureau.tscn" type="PackedScene" id=18]
+[ext_resource path="res://logcabin/chaise.tscn" type="PackedScene" id=19]
+[ext_resource path="res://logcabin/neighbourbed.tscn" type="PackedScene" id=20]
+[ext_resource path="res://logcabin/oldmanbed.tscn" type="PackedScene" id=21]
+[ext_resource path="res://logcabin/fridge.tscn" type="PackedScene" id=22]
+[ext_resource path="res://logcabin/oven.tscn" type="PackedScene" id=23]
+[ext_resource path="res://logcabin/sink.tscn" type="PackedScene" id=24]
 
 [node name="main" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, -50.6509, 5.79642, 58.5387 )
+transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 42.8452, 1.31253, 60.7781 )
 
 [node name="Map" type="Spatial" parent="."]
 
@@ -64,7 +72,7 @@ transform = Transform( -0.455842, 0, -0.164357, 0, 0.8, 0, 0.205447, 0, -0.36467
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3672, 0.93925, -31.5924 )
 
 [node name="sapin10" parent="Map" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4225, 0.93925, -31.5924 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.4225, 0.93925, -25.8298 )
 
 [node name="sapin6" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3672, 0.93925, 38.3248 )
@@ -85,7 +93,16 @@ transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 77.533, -0.28275, -60.99
 transform = Transform( 0.6, 0, 0, 0, 0.8, 0, 0, 0, 0.6, 68.2784, -0.28275, -43.1689 )
 
 [node name="sapin23" parent="Map" instance=ExtResource( 3 )]
-transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 43.4694, -0.28275, -32.7159 )
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 43.4694, -0.28275, 23.4758 )
+
+[node name="sapin24" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 28.9178, 0.605962, 85.0938 )
+
+[node name="sapin25" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 82.7928, 0.605962, 85.0938 )
+
+[node name="sapin26" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 15.2382, 0.958737, 38.6426 )
 
 [node name="sapin3" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.7, -75.9847, 1.04213, -65.7759 )
@@ -134,6 +151,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.9187, 1.76907, -58.8211 )
 
 [node name="branche5" parent="Map" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.3302, 0.0888879, 48.6684 )
+
+[node name="branche13" parent="Map" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.2186, -0.150657, 14.5048 )
+
+[node name="branche14" parent="Map" instance=ExtResource( 11 )]
+transform = Transform( -0.0609441, 0, -0.998141, 0, 1, 0, 0.998141, 0, -0.0609441, 44.2186, -0.150657, 7.8677 )
 
 [node name="branche3" parent="Map" instance=ExtResource( 11 )]
 transform = Transform( 0.392706, 0, -0.919664, 0, 1, 0, 0.919664, 0, 0.392706, -59.8809, -0.586968, -69.9996 )
@@ -192,6 +215,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48.596, 0.584062, 25.4068 )
 [node name="rock17" parent="Map" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5234, 0.584062, 25.4068 )
 
+[node name="rock24" parent="Map" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5284, -0.107569, 5.78309 )
+
+[node name="rock25" parent="Map" instance=ExtResource( 12 )]
+transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 40.5284, -0.10757, 12.1265 )
+
 [node name="rock21" parent="Map" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77.1307, 0.584062, -53.0526 )
 
@@ -234,6 +263,9 @@ transform = Transform( 0.368645, 0, 0, 0, 0.378293, 0.925686, 0, -0.552861, 0.22
 [node name="containment-cell" parent="Map" instance=ExtResource( 15 )]
 transform = Transform( -2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 64.4583, 1.00285, 12.9158 )
 
+[node name="fridge" parent="Map" instance=ExtResource( 22 )]
+transform = Transform( -3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -57.8411, 0.319586, 59.9955 )
+
 [node name="transmission-tower" parent="Map" instance=ExtResource( 6 )]
 transform = Transform( -0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, 26.5116, -0.00495338, 9.56072 )
 
@@ -243,8 +275,41 @@ transform = Transform( 0.139619, 0, -7.99878, 0, 8, 0, 7.99878, 0, 0.139619, -17
 [node name="logcabin" parent="Map" instance=ExtResource( 2 )]
 transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -64.1497, -0.0461183, 57.6707 )
 
+[node name="oldmanbed" parent="Map/logcabin" instance=ExtResource( 21 )]
+transform = Transform( -0.022647, 0, -0.499738, 0, 0.7, 0, 0.699634, 0, -0.0161764, 0.137829, 0.103177, 1.1494 )
+
+[node name="oven2" parent="Map/logcabin" instance=ExtResource( 23 )]
+transform = Transform( 0.2, 0, 0, 0, 0.25, 0, 0, 0, 0.2, -0.332283, 0.198213, -1.24758 )
+
+[node name="sink2" parent="Map/logcabin" instance=ExtResource( 24 )]
+transform = Transform( -8.74229e-09, 0, -0.2, 0, 0.25, 0, 0.2, 0, -8.74229e-09, 0.242611, 0.211672, -1.23434 )
+
 [node name="logcabin2" parent="Map" instance=ExtResource( 2 )]
-transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 60.4881, -0.0337687, 69.0231 )
+transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 57.2329, 0.164762, 64.3023 )
+
+[node name="neighbourbed" parent="Map/logcabin2" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 8.9407e-08, 0, 0.7, 0, 0, 0, 0.7, 0.158009, 0.109774, -0.704073 )
+
+[node name="fridge2" parent="Map/logcabin2" instance=ExtResource( 22 )]
+transform = Transform( -0.3, 1.5134e-09, -1.19209e-07, 0, 0.299974, 0.00393735, 1.04308e-07, 0.00393735, -0.299974, 0.494484, 0.180136, 1.22373 )
+
+[node name="oven" parent="Map/logcabin2" instance=ExtResource( 23 )]
+transform = Transform( -0.2, 0, -7.45058e-08, 0, 0.25, 0, 7.45058e-08, 0, -0.2, -2.28788, 0.21668, 1.34925 )
+
+[node name="sink" parent="Map/logcabin2" instance=ExtResource( 24 )]
+transform = Transform( -2.98023e-08, 0, 0.2, 0, 0.25, 0, -0.2, 0, -2.98023e-08, -2.75403, 0.163857, 1.33419 )
+
+[node name="bureau" parent="Map" instance=ExtResource( 18 )]
+transform = Transform( -0.996829, 0, -0.159148, 0, 2, 0, 0.0795741, 0, -1.99366, 21.5876, 0.0247789, -41.4414 )
+
+[node name="logcabin3" parent="Map" instance=ExtResource( 2 )]
+transform = Transform( -0.996829, 0, -0.159148, 0, 2, 0, 0.0795742, 0, -1.99366, 21.5876, 0.0109291, -39.4414 )
+
+[node name="chaise" parent="Map/logcabin3" instance=ExtResource( 19 )]
+transform = Transform( -0.259808, 0, 0.15, 0, 0.15, 0, -0.0749999, 0, -0.129904, -2.15261, 0.345478, 0.917301 )
+
+[node name="commode-lit" parent="Map/logcabin3" instance=ExtResource( 17 )]
+transform = Transform( 1.19897, 0, 0.0496212, 0, 0.6, 0, -0.0248106, 0, 0.599487, 0.271723, -0.00546453, -0.983871 )
 
 [node name="numpad" parent="." instance=ExtResource( 16 )]
 transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 57.8913, 1.83397, 15.4973 )
