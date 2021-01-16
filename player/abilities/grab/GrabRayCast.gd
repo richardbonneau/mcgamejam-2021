@@ -10,7 +10,7 @@ func _physics_process(delta):
 		var hud_text = ""
 		
 		match collider_name:
-			"door":hud_text = "Open Door"
+			"door":hud_text = "Use Door"
 			"electricbox": hud_text = "Trigger Power Switch"
 			"oven_element": hud_text = "Use Oven"
 			"oven_element2": hud_text = "Use Oven"
