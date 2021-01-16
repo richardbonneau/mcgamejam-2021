@@ -44,7 +44,7 @@ current = true
 far = 1000.0
 
 [node name="DirectionIndicator" type="MeshInstance" parent="Head"]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, -0.5 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 0, -0.0960758 )
 layers = 2
 cast_shadow = 0
 mesh = SubResource( 3 )
