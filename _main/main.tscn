@@ -17,7 +17,7 @@
 [node name="main" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, -50.4847, 2.0797, -86.9897 )
+transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, -50.4847, 5.68528, 58.52 )
 
 [node name="Map" type="Spatial" parent="."]
 
@@ -36,6 +36,9 @@ transform = Transform( -0.547444, 0, -0.510437, 0, 1, 0, 0.583356, 0, -0.479014,
 [node name="sapin" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3672, 0.93925, -31.5924 )
 
+[node name="sapin6" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3672, 0.93925, 38.3248 )
+
 [node name="sapin2" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -60.5997, -0.28275, -49.6689 )
 
@@ -44,6 +47,15 @@ transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.7, -75.9847, 1.04213, -65.775
 
 [node name="sapin4" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, -33.2362, 0.0964892, -38.1035 )
+
+[node name="sapin7" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, -66.2288, 0.0964892, 82.0223 )
+
+[node name="sapin8" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, -62.592, 0.745023, 70.8038 )
+
+[node name="sapin9" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.1, 0, 0, 0, 0.2, 0, 0, 0, 0.1, -72.81, 0.0964892, 70.8038 )
 
 [node name="sapin5" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -21.3485, -0.214282, -32.0228 )
@@ -73,7 +85,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.3241, 1.24648, -64.7932 )
 transform = Transform( -0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, 26.5116, -0.00495338, 9.56072 )
 
 [node name="logcabin" parent="Map" instance=ExtResource( 2 )]
-transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -66.1057, -0.00495338, 58.2722 )
+transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -64.1497, -0.0461183, 57.6707 )
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
 anchor_top = 1.0
