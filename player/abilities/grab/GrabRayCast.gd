@@ -35,5 +35,12 @@ func _input(event):
 				object_grabbed.set_mode(0)
 				object_grabbed.linear_velocity = global_transform.basis.z * -throw_force
 				object_grabbed = false
-			else:
-				self.get_owner().get_owner().get_node("DialogueBox").talk(["hello","object_grabbed:object_grabbed.set_mode(0)object_grabbed.linear_velocity = global_transform.basis.z * -throw_forceobject_grabbed = false"])
+			elif is_colliding():
+				var collider_name = get_collider().name
+				
+				match collider_name:
+					"door": get_collider().trigger_door()
+					"electricbox": get_collider().trigger_switch()
+				
+				
+#				self.get_owner().get_owner().get_node("DialogueBox").talk(["hello","object_grabbed:object_grabbed.set_mode(0)object_grabbed.linear_velocity = global_transform.basis.z * -throw_forceobject_grabbed = false"])
