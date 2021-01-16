@@ -2,7 +2,7 @@ extends KinematicBody
 
 var mouse_sensitivity = 1
 
-var walk_speed = 5
+var walk_speed = 8
 var sprint_multiplier = 5
 var crouch_multiplier = 0.5
 

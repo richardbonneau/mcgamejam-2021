@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -13,16 +13,17 @@
 [ext_resource path="res://terrain/small_props/branche2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://terrain/small_props/rock2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://terrain/small_props/rock.tscn" type="PackedScene" id=13]
+[ext_resource path="res://transmission_tower/electricbox.tscn" type="PackedScene" id=14]
 
 [node name="main" type="Spatial"]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, -50.4847, 5.68528, 58.52 )
+transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, -50.6509, 5.79642, 58.5387 )
 
 [node name="Map" type="Spatial" parent="."]
 
 [node name="terrain" parent="Map" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.166298, -7.62939e-06, -0.146355 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104817, -0.019558, -0.149257 )
 
 [node name="no-foliage-tree2" parent="Map" instance=ExtResource( 5 )]
 transform = Transform( 0.495768, 0, -0.549381, 0, 1, 0, 0.627864, 0, 0.433797, -61.4859, -0.727827, -81.6477 )
@@ -32,6 +33,15 @@ transform = Transform( -0.547444, 0, -0.510437, 0, 1, 0, 0.583356, 0, -0.479014,
 
 [node name="no-foliage-tree4" parent="Map" instance=ExtResource( 5 )]
 transform = Transform( -0.547444, 0, -0.510437, 0, 1, 0, 0.583356, 0, -0.479014, -10.5343, 3.56636, -75.3549 )
+
+[node name="no-foliage-tree5" parent="Map" instance=ExtResource( 5 )]
+transform = Transform( -0.764235, 0, 0.206961, 0, 1, 0, -0.236526, 0, -0.668706, -34.2334, -0.471837, 55.8015 )
+
+[node name="no-foliage-tree6" parent="Map" instance=ExtResource( 5 )]
+transform = Transform( -0.54701, 0, -0.205447, 0, 0.8, 0, 0.246536, 0, -0.455842, -37.2593, -0.471837, 50.1549 )
+
+[node name="no-foliage-tree7" parent="Map" instance=ExtResource( 5 )]
+transform = Transform( -0.455842, 0, -0.164357, 0, 0.8, 0, 0.205447, 0, -0.364673, -25.668, -0.471837, 51.4009 )
 
 [node name="sapin" parent="Map" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3672, 0.93925, -31.5924 )
@@ -63,6 +73,9 @@ transform = Transform( 0.2, 0, 0, 0, 0.4, 0, 0, 0, 0.2, -21.3485, -0.214282, -32
 [node name="branche2" parent="Map" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.9187, 1.76907, -58.8211 )
 
+[node name="branche5" parent="Map" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.3302, 0.0888879, 48.6684 )
+
 [node name="branche3" parent="Map" instance=ExtResource( 11 )]
 transform = Transform( 0.392706, 0, -0.919664, 0, 1, 0, 0.919664, 0, 0.392706, -59.8809, -0.586968, -69.9996 )
 
@@ -81,11 +94,23 @@ transform = Transform( 0.542969, 0, -0.839753, 0.760882, 0.423109, 0.491973, 0.3
 [node name="rock2" parent="Map" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.3241, 1.24648, -64.7932 )
 
+[node name="rock5" parent="Map" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -59.3241, 0.584062, 45.4928 )
+
+[node name="rock6" parent="Map" instance=ExtResource( 12 )]
+transform = Transform( 0.368645, 0, 0, 0, 0.378293, 0.925686, 0, -0.552861, 0.225933, -59.3241, 0.502822, 41.9794 )
+
 [node name="transmission-tower" parent="Map" instance=ExtResource( 6 )]
 transform = Transform( -0.4, 0, -3.49691e-08, 0, 0.4, 0, 3.49691e-08, 0, -0.4, 26.5116, -0.00495338, 9.56072 )
 
+[node name="electricbox" parent="Map/transmission-tower" instance=ExtResource( 14 )]
+transform = Transform( 0.139619, 0, -7.99878, 0, 8, 0, 7.99878, 0, 0.139619, -17.3671, 2.1157, 28.7579 )
+
 [node name="logcabin" parent="Map" instance=ExtResource( 2 )]
 transform = Transform( -2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, -64.1497, -0.0461183, 57.6707 )
+
+[node name="logcabin2" parent="Map" instance=ExtResource( 2 )]
+transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 60.4881, -0.0337687, 69.0231 )
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
 anchor_top = 1.0
