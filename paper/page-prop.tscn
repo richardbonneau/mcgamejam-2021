@@ -71,6 +71,7 @@ __meta__ = {
 }
 
 [node name="to_escape" type="Label" parent="page_ui"]
+visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -174.0

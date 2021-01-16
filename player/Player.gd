@@ -1,8 +1,10 @@
 extends KinematicBody
 
+var player_can_move = true
+
 var mouse_sensitivity = 1
 
-var walk_speed = 8
+var walk_speed = 10
 var sprint_multiplier = 5
 var crouch_multiplier = 0.5
 
@@ -28,7 +30,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if !player_can_move: return
+	if event is InputEventMouseMotion :
 		rotation_degrees.y -= event.relative.x * mouse_sensitivity / 10
 		$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x - event.relative.y * mouse_sensitivity / 10, -90, 90)
 	

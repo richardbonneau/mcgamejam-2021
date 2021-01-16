@@ -24,7 +24,10 @@ func _physics_process(delta):
 		$crosshair.visible = false
 	
 
+
+
 func _input(event):
+	if self.get_owner().player_can_move == false: return
 	if event is InputEventMouseButton: # If we grab and object and press the left click, we throw it
 		if event.button_index == BUTTON_LEFT and event.is_pressed():
 			if is_colliding():
@@ -40,8 +43,11 @@ func _input(event):
 					"oven_element2": get_collider().trigger_element()
 					"oven_element3": get_collider().trigger_element()
 					"oven_element4": get_collider().trigger_element()
-					"page": get_collider().read_page()
+					"page": 
+						get_collider().read_page(self.get_owner())
+					"oldman":
+						get_collider().talk_to(self.get_owner())
+					"neighbour":
+						get_collider().talk_to(self.get_owner())
 					
-				
-				
-#				self.get_owner().get_owner().get_node("DialogueBox").talk(["hello","object_grabbed:object_grabbed.set_mode(0)object_grabbed.linear_velocity = global_transform.basis.z * -throw_forceobject_grabbed = false"])
+					
