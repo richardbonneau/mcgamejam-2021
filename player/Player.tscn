@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/abilities/shoot/ShootingRayCast.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/abilities/grab/GrabRayCast.tscn" type="PackedScene" id=3]
+[ext_resource path="res://palette/default_env.tres" type="Environment" id=4]
 [ext_resource path="res://player/abilities/footstep/FootstepSound.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape" id=1]
@@ -36,6 +37,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0 )
 
 [node name="Camera" type="Camera" parent="Head"]
 cull_mask = 2147483649
+environment = ExtResource( 4 )
 current = true
 far = 1000.0
 

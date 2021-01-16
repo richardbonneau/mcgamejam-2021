@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://palette/Material_001.material" type="Material" id=1]
+[ext_resource path="res://palette/unshaded-main.material" type="Material" id=1]
+
 
 [sub_resource type="SpatialMaterial" id=2]
 resource_name = "Material.001"

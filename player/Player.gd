@@ -3,7 +3,7 @@ extends KinematicBody
 var mouse_sensitivity = 1
 
 var walk_speed = 5
-var sprint_multiplier = 1.5
+var sprint_multiplier = 5
 var crouch_multiplier = 0.5
 
 var ground_acceleration = 8
@@ -45,7 +45,7 @@ func _input(event):
 	direction = direction.normalized().rotated(Vector3.UP, rotation.y)
 	
 	if Input.is_key_pressed(KEY_SHIFT):
-		return
+#		return
 		sprint_speed = sprint_multiplier
 	else:
 		sprint_speed = 1
