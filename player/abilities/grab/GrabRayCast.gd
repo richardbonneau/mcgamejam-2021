@@ -35,3 +35,5 @@ func _input(event):
 				object_grabbed.set_mode(0)
 				object_grabbed.linear_velocity = global_transform.basis.z * -throw_force
 				object_grabbed = false
+			else:
+				self.get_owner().get_owner().get_node("DialogueBox").talk(["hello","object_grabbed:object_grabbed.set_mode(0)object_grabbed.linear_velocity = global_transform.basis.z * -throw_forceobject_grabbed = false"])

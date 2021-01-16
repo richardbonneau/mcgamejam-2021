@@ -51,6 +51,7 @@ func _input(event):
 		sprint_speed = 1
 	
 	if Input.is_key_pressed(KEY_CONTROL):
+		return
 		crouch_speed = crouch_multiplier
 		sprint_speed = 1 # The control key cancel the shift key if it is pressed
 		crouch(true)
