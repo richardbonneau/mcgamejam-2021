@@ -318,7 +318,8 @@ transform = Transform( 1.19897, 0, 0.0496212, 0, 0.6, 0, -0.0248106, 0, 0.599487
 transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 57.8913, 1.83397, 15.4973 )
 
 [node name="page" parent="Map" instance=ExtResource( 25 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.8594, 1.06256, -39.0399 )
+transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 35.6703, 2.42255, -2.10213 )
+subject = "dont_touch"
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
 anchor_top = 1.0

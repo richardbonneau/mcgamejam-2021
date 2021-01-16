@@ -16,6 +16,7 @@ func _physics_process(delta):
 			"oven_element2": hud_text = "Use Oven"
 			"oven_element3": hud_text = "Use Oven"
 			"oven_element4": hud_text = "Use Oven"
+			"page":hud_text = "Read"
 		
 		$crosshair/text.text = hud_text
 		$crosshair.visible = true
@@ -39,6 +40,8 @@ func _input(event):
 					"oven_element2": get_collider().trigger_element()
 					"oven_element3": get_collider().trigger_element()
 					"oven_element4": get_collider().trigger_element()
+					"page": get_collider().read_page()
+					
 				
 				
 #				self.get_owner().get_owner().get_node("DialogueBox").talk(["hello","object_grabbed:object_grabbed.set_mode(0)object_grabbed.linear_velocity = global_transform.basis.z * -throw_forceobject_grabbed = false"])
