@@ -33,7 +33,7 @@
 script = ExtResource( 28 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 42.8452, 1.31253, 60.7781 )
+transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 49.8556, 6.09922, 53.3428 )
 
 [node name="Map" type="Spatial" parent="."]
 
@@ -350,5 +350,17 @@ __meta__ = {
 }
 message_sound = ExtResource( 8 )
 font = ExtResource( 9 )
-action_name = "ui_accept"
+action_name = "ui_select"
+wait_time = 0.07
+
+[node name="Label" type="Label" parent="DialogueBox"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -133.992
+margin_bottom = -94.9921
+custom_fonts/font = ExtResource( 9 )
+text = "Press SPACE to exit"
+align = 1
 [connection signal="dialogue_exit" from="DialogueBox" to="." method="_on_DialogueBox_dialogue_exit"]

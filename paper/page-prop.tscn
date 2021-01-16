@@ -36,7 +36,6 @@ material/0 = ExtResource( 1 )
 shape = SubResource( 2 )
 
 [node name="page_ui" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -71,12 +70,11 @@ __meta__ = {
 }
 
 [node name="to_escape" type="Label" parent="page_ui"]
-visible = false
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -174.0
 margin_right = 174.0
 margin_bottom = 39.0
 custom_fonts/font = ExtResource( 5 )
-text = "Press SPACE to leave"
+text = "Press SPACE to exit"
 align = 1

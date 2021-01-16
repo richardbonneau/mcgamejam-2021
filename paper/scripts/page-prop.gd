@@ -1,8 +1,8 @@
 extends StaticBody
 
 export(String) var subject = "blank" 
-
-func read_page(player):
+onready var player = self.get_owner().get_node("Player")
+func read_page():
 	player.player_can_move = false
 	var text_on_page = ""
 	match subject:
@@ -12,6 +12,7 @@ func read_page(player):
 	$page_ui/Label.text = text_on_page
 
 func _input(event):
-	if Input.is_action_pressed("ui_accept"):
+	if Input.is_action_pressed("ui_select"):
 		$page_ui.visible = false
-	
+		player.player_can_move = true
+

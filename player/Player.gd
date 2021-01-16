@@ -1,6 +1,6 @@
 extends KinematicBody
 
-var player_can_move = true
+onready var player_can_move = false
 
 var mouse_sensitivity = 1
 
@@ -63,6 +63,7 @@ func _input(event):
 		crouch(false)
 	
 func _physics_process(delta):
+#	print("$Player.player_can_move  ",player_can_move )
 	if is_on_floor():
 		gravity_vec = -get_floor_normal() * stick_amount # The gravity is in the direction of the ground to climb it more easily
 		acceleration = ground_acceleration

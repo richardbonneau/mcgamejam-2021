@@ -43,11 +43,8 @@ func _input(event):
 					"oven_element2": get_collider().trigger_element()
 					"oven_element3": get_collider().trigger_element()
 					"oven_element4": get_collider().trigger_element()
-					"page": 
-						get_collider().read_page(self.get_owner())
-					"oldman":
-						get_collider().talk_to(self.get_owner())
-					"neighbour":
-						get_collider().talk_to(self.get_owner())
+					"page": get_collider().read_page()
+					"oldman": get_collider().talk_to()
+					"neighbour": get_collider().talk_to()
 					
 					
