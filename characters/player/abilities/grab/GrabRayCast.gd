@@ -15,6 +15,8 @@ func _physics_process(delta):
 			"electricbox": hud_text = "Trigger Power Switch"
 			"key": hud_text = "Pick up Key"
 			"key2": hud_text = "Pick up Key"
+			"key3": hud_text = "Pick up Electronic Key"
+			"safedoor": hud_text = "Open Safe"
 			
 			"oven_element": hud_text = "Use Oven"
 			"oven_element2": hud_text = "Use Oven"
@@ -27,6 +29,8 @@ func _physics_process(delta):
 			
 			"page":hud_text = "Read"
 			"page2":hud_text = "Read"
+			"page3":hud_text = "Read"
+			"page4":hud_text = "Read"
 			
 			"oldman": hud_text = "Talk to Old Man"
 			"neighbour": hud_text = "Talk to Neighbour"
@@ -89,6 +93,8 @@ func _input(event):
 					"celldoor": get_collider().trigger_door()
 					"key": get_collider().pickup_key()
 					"key2": get_collider().pickup_key()
+					"key3": get_collider().pickup_key()
+					"safedoor": get_collider().open_door()
 					
 					"oven_element": get_collider().trigger_element()
 					"oven_element2": get_collider().trigger_element()
@@ -101,6 +107,8 @@ func _input(event):
 					
 					"page": get_collider().read_page()
 					"page2": get_collider().read_page()
+					"page3": get_collider().read_page()
+					"page4": get_collider().read_page()
 					
 					"oldman": get_collider().talk_to()
 					"neighbour": get_collider().talk_to()

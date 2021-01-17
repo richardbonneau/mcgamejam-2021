@@ -7,6 +7,7 @@ onready var player = main.get_node("Player")
 func talk_to():
 	player.player_can_move = false
 	var dialogues
+	var ending = false
 	for act in main.acts:
 		if act.num == main.current_act and !act.complete and act.character == "neighbour":
 			dialogues = act.dialogues
@@ -15,6 +16,8 @@ func talk_to():
 				main.current_act += 1
 			if act.new_oldman_coordinates:
 				oldman.global_transform.origin = act.new_oldman_coordinates
+			if act.ending:
+				ending = true
 			break
-	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues)
+	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues,ending)
 	else: player.player_can_move = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://containment-cell/doll.tscn" type="PackedScene" id=34]
 [ext_resource path="res://containment-cell/doll2.tscn" type="PackedScene" id=35]
 [ext_resource path="res://containment-cell/doll3.tscn" type="PackedScene" id=36]
+[ext_resource path="res://logcabin/safe.tscn" type="PackedScene" id=37]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 22.6935, 16.2297, 1 )
@@ -51,6 +52,10 @@ transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078,
 [node name="key" parent="Map" instance=ExtResource( 32 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -41.8776 )
 key_type = "electricbox_key"
+
+[node name="key3" parent="Map" instance=ExtResource( 32 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -40.9572 )
+key_type = "safe"
 
 [node name="key2" parent="Map" instance=ExtResource( 32 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 80.9527, 0.185846, 52.0373 )
@@ -257,7 +262,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5234, 0.584062, 25.4068 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5284, -0.107569, 5.78309 )
 
 [node name="rock25" parent="Map/Nature" instance=ExtResource( 12 )]
-transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 40.5284, -0.10757, 12.1265 )
+transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 35.337, -0.10757, 12.788 )
 
 [node name="rock28" parent="Map/Nature" instance=ExtResource( 12 )]
 transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 40.5284, -0.10757, 47.0467 )
@@ -427,13 +432,16 @@ transform = Transform( -0.259808, 0, 0.15, 0, 0.15, 0, -0.0749999, 0, -0.129904,
 [node name="commode-lit" parent="Map/buildings/logcabin3" instance=ExtResource( 17 )]
 transform = Transform( 1.19897, 0, 0.0496212, 0, 0.6, 0, -0.0248106, 0, 0.599487, 0.271723, -0.00546453, -0.983871 )
 
+[node name="safe" parent="Map/buildings/logcabin3" instance=ExtResource( 37 )]
+transform = Transform( -0.997622, 0, -8.19564e-08, 0, 0.5, 0, 3.05474e-07, 0, -0.504726, -0.0916882, 0.795094, -0.00364685 )
+
 [node name="numpad" parent="Map/buildings" instance=ExtResource( 16 )]
 transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 57.8913, 1.83397, 15.4973 )
 
 [node name="people" type="Spatial" parent="Map"]
 
 [node name="neighbour" parent="Map/people" instance=ExtResource( 26 )]
-transform = Transform( -0.998543, -0.0035081, -0.0538523, -0.00350302, 0.999994, -0.000188921, 0.0538526, 0, -0.998549, 100.206, 0.255795, -3.76741 )
+transform = Transform( -0.0381265, 5.52257e-05, 0.999273, -0.00350302, 0.999994, -0.000188921, -0.999267, -0.00350767, -0.0381261, 135.621, 0.038528, 13.1528 )
 
 [node name="oldman" parent="Map/people" instance=ExtResource( 27 )]
 transform = Transform( 0.0665875, 0, 0.997781, 0, 1, 0, -0.997781, 0, 0.0665875, -55.2526, -0.308352, 56.8682 )
@@ -449,9 +457,13 @@ subject = "dont_touch"
 transform = Transform( 0.56204, -0.029919, 0.826568, 9.25603e-08, 0.999345, 0.0361728, -0.82711, -0.0203305, 0.561672, 21.637, 0.964506, -37.49 )
 subject = "scp_report1"
 
+[node name="page4" parent="Map" instance=ExtResource( 25 )]
+transform = Transform( -0.9956, 0.00338983, -0.0936471, 9.25603e-08, 0.999345, 0.0361728, 0.0937088, 0.0360137, -0.994947, 21.637, 1.07774, -39.3382 )
+subject = "cell_code"
+
 [node name="page3" parent="Map" instance=ExtResource( 25 )]
-transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 36.4808, 1.65153, -2.3888 )
-subject = "daughter_help"
+transform = Transform( -0.999735, -0.023014, -0.000468072, 0.0230188, -0.999528, -0.0203262, -6.5549e-08, -0.0203316, 0.999793, 55.9619, 1.07794, 60.5978 )
+subject = "scp_report2"
 
 [node name="exit" type="StaticBody" parent="Map"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.7681, 0, -91.655 )

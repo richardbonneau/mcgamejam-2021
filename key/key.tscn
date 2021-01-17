@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://key/imports/Material_001.material" type="Material" id=1]
 [ext_resource path="res://palette/unshaded-main.material" type="Material" id=2]
 [ext_resource path="res://key/scripts/key.gd" type="Script" id=3]
+[ext_resource path="res://key/imports/electronickey.tres" type="ArrayMesh" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube"
@@ -26,10 +27,16 @@ extents = Vector3( 0.481456, 0.141917, 0.678081 )
 transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0 )
 script = ExtResource( 3 )
 
-[node name="Cube" type="MeshInstance" parent="."]
+[node name="regular" type="MeshInstance" parent="."]
 transform = Transform( 0.14267, 0, 0, 0, 0.14267, 0, 0, 0, 0.14267, 0, 0, 0 )
 mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
+
+[node name="electronic" type="MeshInstance" parent="."]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0.157925, -0.09224, 0.310896 )
+visible = false
+mesh = ExtResource( 4 )
+material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.152998, 0.235215 )

@@ -8,7 +8,7 @@ func button_press(btn):
 		$wrong.play()
 		code_entered = ""
 	elif btn == "confirm":
-		if code_entered == "12":
+		if code_entered == "1997":
 			$success.play()
 			celldoor.trigger_door()
 		else:

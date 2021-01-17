@@ -61,8 +61,10 @@ var block_box_timer : bool
 
 var percent_addition : float
 
-onready var exit_label = self.get_owner().get_node("DialogueBox").get_node("Label")
-onready var player = self.get_owner().get_node("Player")
+onready var main = self.get_owner()
+onready var exit_label = main.get_node("DialogueBox").get_node("Label")
+onready var player = main.get_node("Player")
+onready var end_game = false
 
 signal dialogue_exit()
 
@@ -100,6 +102,7 @@ func _enter_tree():
 	hide()
 
 func _ready():
+	main.get_node("Map/buildings/containment-cell/celldoor")
 	message_sound.loop_mode = message_sound.LOOP_DISABLED
 	message_sound.loop_begin = 0
 	message_sound.loop_end = 0
@@ -129,11 +132,14 @@ func _input(event):
 				hide()
 				InputBlocker.wait_time = block_time
 				InputBlocker.start()
+				if end_game:
+					main.get_node("Map/buildings/containment-cell/celldoor").game_over()
 
-func talk(textarray : Array):
+func talk(textarray : Array, is_ending : bool):
 	"""
 	Use this function to activate the DialogueBox
 	"""
+	end_game = is_ending
 	text = textarray
 	block_walk = true
 	num = 0
