@@ -27,6 +27,7 @@ onready var acts = [
 		"finishesAct":true,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["Howdy youngster. What brings you around here?","You were on your way to your car and you got lost? You ain't the brightest fella are you?","Well, while you're here, could you do me a favor before you go?","It's really simple, the power is acting a bit strange lately. Could you go up to the power panel and turn it off and on again?","My granddaughter works in IT and she tells me that's how she fixes all of her problems."," Let me know when it's done."]
 	},
@@ -37,6 +38,7 @@ onready var acts = [
 		"finishesAct":false,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["Is it done? No? Then shoo! You have to turn the power off and on again."]
 	},
@@ -47,6 +49,7 @@ onready var acts = [
 		"finishesAct":true,
 		"new_oldman_coordinates":Vector3(-65.3,-0.3,56.8),
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["What exactly do you think you're doing?","Are you trying to shut the power down?","Didn't you see the sign? What the hell were you thinking? Give me that.","YOU LOSE THE KEY TO THE ELECTRICAL PANEL","Now get out of here."]
 	},
@@ -57,6 +60,7 @@ onready var acts = [
 		"finishesAct":false,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["Out."]
 	},
@@ -67,6 +71,7 @@ onready var acts = [
 		"finishesAct":true,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":Vector3(100,0,0),
+		"neighbour_rotate": true,
 		"ending":false,
 		"dialogues": ["What? You couldn't do it? How come?","I see, you met the neighbour. Strange fella. He used to live with his wife and daughter but I haven't seen them in ages.","Definitely very strange. We are allowed to deal with the power around here.","Besides, my heating is out, so we really have to do it anyways.","Tell you what, at this time usually he is out to buy groceries.", "I think you could probably sneak into his house and grab that key that he stole off of ya.","Let's do this quickly while he is away. See if you can find a way inside of the house."]
 	},
@@ -77,6 +82,7 @@ onready var acts = [
 		"finishesAct":false,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["Do it."]
 	},
@@ -87,6 +93,7 @@ onready var acts = [
 		"finishesAct":false,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":false,
 		"dialogues": ["My heater works again. Thank you! You can be on your way now ..."]
 	},
@@ -97,6 +104,7 @@ onready var acts = [
 		"finishesAct":true,
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
+		"neighbour_rotate": false,
 		"ending":true,
 		"dialogues": ["You shouldn't have come here.","You have seen too much and you wouldn't understand. They would kill her if they knew what she has become.", "I owed her a new doll, it's been a while. I think you will be perfect."]
 	},

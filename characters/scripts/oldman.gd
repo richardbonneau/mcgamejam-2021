@@ -4,7 +4,6 @@ onready var main = self.get_owner()
 onready var neighbour = main.get_node("Map/people/neighbour")
 onready var player = main.get_node("Player")
 
-
 func talk_to():
 	player.player_can_move = false
 	var dialogues
@@ -16,6 +15,9 @@ func talk_to():
 				main.current_act += 1
 			if act.new_neighbour_coordinates:
 				neighbour.global_transform.origin = act.new_neighbour_coordinates
+			if act.neighbour_rotate:
+				
+				neighbour.rotation.y = 165
 			break
 	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues,false)
 	else: player.player_can_move = true
