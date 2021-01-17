@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/abilities/grab/GrabRayCast.gd" type="Script" id=1]
 [ext_resource path="res://palette/dot.png" type="Texture" id=2]
 [ext_resource path="res://palette/dialogue-font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://palette/leftclick.tres" type="DynamicFont" id=4]
 
 [node name="GrabRayCast" type="RayCast"]
 enabled = true
@@ -18,7 +19,6 @@ wait_time = 0.25
 one_shot = true
 
 [node name="crosshair" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -48,6 +48,20 @@ margin_bottom = -26.0569
 custom_fonts/font = ExtResource( 3 )
 text = "Open Door"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text2" type="Label" parent="crosshair"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -89.8755
+margin_bottom = -50.8755
+custom_fonts/font = ExtResource( 4 )
+text = "Left Click"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

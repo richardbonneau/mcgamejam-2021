@@ -14,4 +14,5 @@ func talk_to():
 				act.complete = true
 				main.current_act += 1
 			break
-	self.get_owner().get_node("DialogueBox").talk(dialogues)
+	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues)
+	else: player.player_can_move = true

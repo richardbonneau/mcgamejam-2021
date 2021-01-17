@@ -7,7 +7,6 @@ var destination
 var offset
 
 func trigger_door():
-	print("celldoor")
 	if !door_opened:
 		var self_origin = get_global_transform().origin
 		destination = Vector3(self_origin.x,self_origin.y,self_origin.z+2)
