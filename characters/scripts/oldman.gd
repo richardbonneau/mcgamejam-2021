@@ -1,6 +1,7 @@
 extends StaticBody
 
 onready var main = self.get_owner()
+onready var neighbour = main.get_node("Map/people/neighbour")
 onready var player = main.get_node("Player")
 
 
@@ -13,6 +14,8 @@ func talk_to():
 			if act.finishesAct: 
 				act.complete = true
 				main.current_act += 1
+			if act.new_neighbour_coordinates:
+				neighbour.global_transform.origin = act.new_neighbour_coordinates
 			break
 	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues)
 	else: player.player_can_move = true

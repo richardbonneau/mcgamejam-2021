@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -30,7 +30,8 @@
 [ext_resource path="res://_main/scripts/main.gd" type="Script" id=28]
 [ext_resource path="res://logcabin/toilet.tscn" type="PackedScene" id=29]
 [ext_resource path="res://characters/girl.tscn" type="PackedScene" id=30]
-[ext_resource path="res://_main/mcgamejammusic6.wav" type="AudioStream" id=31]
+[ext_resource path="res://_main/imports/mcgamejammusic6.wav" type="AudioStream" id=31]
+[ext_resource path="res://key/key.tscn" type="PackedScene" id=32]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 22.6935, 16.2297, 1 )
@@ -39,9 +40,17 @@ extents = Vector3( 22.6935, 16.2297, 1 )
 script = ExtResource( 28 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 49.8556, 6.09922, 53.3428 )
+transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 34.3508, 6.09922, -36.3865 )
 
 [node name="Map" type="Spatial" parent="."]
+
+[node name="key" parent="Map" instance=ExtResource( 32 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -41.8776 )
+key_type = "electricbox_key"
+
+[node name="key2" parent="Map" instance=ExtResource( 32 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 80.6038, -4.03146, 69.9766 )
+key_type = "neighbour_house_key"
 
 [node name="toilet" parent="Map" instance=ExtResource( 29 )]
 transform = Transform( -0.422051, 0, -0.558456, 0, 0.7, 0, 0.558456, 0, -0.422051, 54.0969, 0.121685, 59.25 )
@@ -353,10 +362,10 @@ transform = Transform( -2.18557e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.18557e-08, 5
 [node name="people" type="Spatial" parent="Map"]
 
 [node name="neighbour" parent="Map/people" instance=ExtResource( 26 )]
-transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, 31.0776, 0.255795, -4.94129 )
+transform = Transform( -0.998543, -0.0035081, -0.0538523, -0.00350302, 0.999994, -0.000188921, 0.0538526, 0, -0.998549, 100.206, 0.255795, -3.76741 )
 
 [node name="oldman" parent="Map/people" instance=ExtResource( 27 )]
-transform = Transform( -0.381377, 0, 0.92442, 0, 1, 0, -0.92442, 0, -0.381377, -54.8767, -0.308352, 56.8682 )
+transform = Transform( 0.0665875, 0, 0.997781, 0, 1, 0, -0.997781, 0, 0.0665875, -55.2526, -0.308352, 56.8682 )
 
 [node name="girl" parent="Map/people" instance=ExtResource( 30 )]
 transform = Transform( 0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 67.589, 0.237418, 13.7898 )
@@ -366,6 +375,10 @@ transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0
 subject = "dont_touch"
 
 [node name="page2" parent="Map" instance=ExtResource( 25 )]
+transform = Transform( 0.56204, -0.029919, 0.826568, 9.25603e-08, 0.999345, 0.0361728, -0.82711, -0.0203305, 0.561672, 21.637, 0.964506, -37.49 )
+subject = "scp_report1"
+
+[node name="page3" parent="Map" instance=ExtResource( 25 )]
 transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 36.4808, 1.65153, -2.3888 )
 subject = "daughter_help"
 

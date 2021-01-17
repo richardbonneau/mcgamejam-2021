@@ -13,6 +13,8 @@ func _physics_process(delta):
 		match collider_name:
 			"door":hud_text = "Use Door"
 			"electricbox": hud_text = "Trigger Power Switch"
+			"key": hud_text = "Pick up Key"
+			
 			"oven_element": hud_text = "Use Oven"
 			"oven_element2": hud_text = "Use Oven"
 			"oven_element3": hud_text = "Use Oven"
@@ -21,11 +23,14 @@ func _physics_process(delta):
 			"toilet2": hud_text = "Flush"
 			"sink": hud_text = "Use Sink"
 			"sink2": hud_text = "Use Sink"
+			
 			"page":hud_text = "Read"
 			"page2":hud_text = "Read"
+			
 			"oldman": hud_text = "Talk to Old Man"
 			"neighbour": hud_text = "Talk to Neighbour"
 			"girl": hud_text = "Sick Girl"
+			
 			"button0": hud_text = "0"
 			"button1": hud_text = "1"
 			"button2": hud_text = "2"
@@ -62,6 +67,9 @@ func _input(event):
 						
 					"electricbox": get_collider().trigger_switch()
 					"celldoor": get_collider().trigger_door()
+					"key": get_collider().pickup_key()
+					
+					
 					"oven_element": get_collider().trigger_element()
 					"oven_element2": get_collider().trigger_element()
 					"oven_element3": get_collider().trigger_element()
@@ -70,11 +78,14 @@ func _input(event):
 					"toilet2": get_collider().flush()
 					"sink": get_collider().trigger_sink()
 					"sink2": get_collider().trigger_sink()
+					
 					"page": get_collider().read_page()
 					"page2": get_collider().read_page()
+					
 					"oldman": get_collider().talk_to()
 					"neighbour": get_collider().talk_to()
 					"girl": print("sick girl")
+					
 					"button0": get_collider().get_owner().button_press("0")
 					"button1": get_collider().get_owner().button_press("1")
 					"button2": get_collider().get_owner().button_press("2")
