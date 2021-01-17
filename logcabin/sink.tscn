@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://palette/water.tres" type="Material" id=1]
 [ext_resource path="res://palette/unshaded-main.material" type="Material" id=2]
 [ext_resource path="res://logcabin/scripts/sink.gd" type="Script" id=3]
+[ext_resource path="res://logcabin/imports/audio/sink.wav" type="AudioStream" id=4]
 
 [sub_resource type="Image" id=7]
 data = {
@@ -56,3 +57,7 @@ transform = Transform( 0.0484453, -0.123714, 0, 0.0123714, 0.484453, 0, 0, 0, 0.
 visible = false
 mesh = SubResource( 6 )
 material/0 = ExtResource( 1 )
+
+[node name="audio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_db = 3.0

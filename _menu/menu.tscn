@@ -25,13 +25,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -108.0
+margin_left = -182.0
 margin_top = -25.0
-margin_right = 108.0
+margin_right = 182.0
 margin_bottom = 25.0
 theme = ExtResource( 2 )
 custom_fonts/font = ExtResource( 1 )
-text = "Play Full Screen"
+text = "Full Screen (Recommended)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -47,7 +47,7 @@ margin_right = 194.5
 margin_bottom = 117.653
 theme = ExtResource( 2 )
 custom_fonts/font = ExtResource( 1 )
-text = "Play with current screen size"
+text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,10 +66,13 @@ align = 1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = -39.0
+margin_top = -71.0
 custom_fonts/font = ExtResource( 1 )
-text = "Made with <3 with Godot"
+text = "Made with the Godot Engine"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="." method="_full_screen_button"]
 [connection signal="pressed" from="Button2" to="." method="_windowed_button"]

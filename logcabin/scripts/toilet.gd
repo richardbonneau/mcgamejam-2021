@@ -8,6 +8,7 @@ var offset
 
 func flush():
 	if !is_flushing:
+		$audio.play()
 		water_origin = $water.get_global_transform().origin
 		water_destination = Vector3(water_origin.x,water_origin.y+2,water_origin.z)
 		is_flushing = true
