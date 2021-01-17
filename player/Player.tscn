@@ -54,5 +54,7 @@ material/0 = null
 visible = false
 
 [node name="GrabRayCast" parent="Head" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.524771 )
+cast_to = Vector3( 0, 0, -2 )
 
 [node name="FootstepSound" parent="Head" instance=ExtResource( 7 )]
