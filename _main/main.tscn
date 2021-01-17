@@ -41,6 +41,9 @@ transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078,
 [node name="toilet" parent="Map" instance=ExtResource( 29 )]
 transform = Transform( -0.422051, 0, -0.558456, 0, 0.7, 0, 0.558456, 0, -0.422051, 54.0969, 0.121685, 59.25 )
 
+[node name="toilet2" parent="Map" instance=ExtResource( 29 )]
+transform = Transform( 0.0221094, 0, -0.699651, 0, 0.7, 0, 0.699651, 0, 0.0221094, -57.5162, -0.0960392, 55.3347 )
+
 [node name="terrain" parent="Map" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104817, -0.019558, -0.149257 )
 

@@ -27,5 +27,3 @@ func _physics_process(delta):
 			water_destination = Vector3(water_origin.x,water_origin.y-2,water_origin.z)
 			
 		$water.move_and_slide(offset.normalized() * 10 * delta)
-		print(distance_to_dest)
-	
