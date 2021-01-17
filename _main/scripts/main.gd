@@ -52,3 +52,9 @@ onready var acts = [
 		"dialogues": ["You shouldn't have come here.","You have seen too much and you wouldn't understand. You did this to yourself. I have warned you.", "This is the last time you will ever see the light of the sun.", "Good night"]
 	},
 	]
+
+func _ready():
+	pass
+
+func _on_Button_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
