@@ -16,8 +16,9 @@ func talk_to():
 			if act.new_neighbour_coordinates:
 				neighbour.global_transform.origin = act.new_neighbour_coordinates
 			if act.neighbour_rotate:
-				
 				neighbour.rotation.y = 165
+			if act.num == 3:
+				main.get_node("Map/key2").visible = true
 			break
 	if dialogues: self.get_owner().get_node("DialogueBox").talk(dialogues,false)
 	else: player.player_can_move = true

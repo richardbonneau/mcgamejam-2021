@@ -67,6 +67,7 @@ key_type = "electricbox_key_2"
 
 [node name="key2" parent="Map" instance=ExtResource( 32 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 59.0537, -0.218988, 65.9633 )
+visible = false
 key_type = "neighbour_house_key"
 
 [node name="toilet" parent="Map" instance=ExtResource( 29 )]
@@ -474,7 +475,7 @@ transform = Transform( 0.56204, -0.029919, 0.826568, 9.25603e-08, 0.999345, 0.03
 subject = "scp_report1"
 
 [node name="page4" parent="Map" instance=ExtResource( 25 )]
-transform = Transform( -0.9956, 0.00338983, -0.0936471, 9.25603e-08, 0.999345, 0.0361728, 0.0937088, 0.0360137, -0.994947, 21.637, 1.07774, -39.3382 )
+transform = Transform( -0.0717587, -0.0360796, 0.996768, 9.25603e-08, 0.999345, 0.0361728, -0.997422, 0.00259583, -0.0717113, 21.7612, 1.09787, -39.3382 )
 subject = "cell_code"
 
 [node name="page5" parent="Map" instance=ExtResource( 25 )]
@@ -526,15 +527,16 @@ align = 1
 [node name="Button" type="Button" parent="."]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -20.0
-margin_right = 108.0
-text = "Capture Mouse"
+margin_top = -40.0
+margin_right = 150.0
+text = "Lock Mouse"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 31 )
+volume_db = -9.088
 autoplay = true
 [connection signal="dialogue_exit" from="DialogueBox" to="." method="_on_DialogueBox_dialogue_exit"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

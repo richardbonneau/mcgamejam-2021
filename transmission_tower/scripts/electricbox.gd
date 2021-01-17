@@ -12,9 +12,11 @@ func trigger_switch():
 	elif main.player_inventory.electricbox_key_2 and steps < 2:
 		steps+=1
 		if switch_open:
+			$audio.play()
 			$switch.rotation.x = atan2(0, -0.7)
 			switch_open = false
 		else:
+			$audio.play()
 			$switch.rotation.x = atan2(0, 0.7)
 			switch_open = true
 		if steps == 2:
