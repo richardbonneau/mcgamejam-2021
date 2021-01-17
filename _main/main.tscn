@@ -49,7 +49,7 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -41.87
 key_type = "electricbox_key"
 
 [node name="key2" parent="Map" instance=ExtResource( 32 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 80.6038, -4.03146, 69.9766 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 80.9527, 0.185846, 52.0373 )
 key_type = "neighbour_house_key"
 
 [node name="toilet" parent="Map" instance=ExtResource( 29 )]
@@ -331,6 +331,7 @@ transform = Transform( -8.74229e-09, 0, -0.2, 0, 0.25, 0, 0.2, 0, -8.74229e-09, 
 
 [node name="logcabin2" parent="Map/buildings" instance=ExtResource( 2 )]
 transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 57.2329, 0.164762, 64.3023 )
+is_neighbour_house = true
 
 [node name="neighbourbed" parent="Map/buildings/logcabin2" instance=ExtResource( 20 )]
 transform = Transform( 1, 0, 8.9407e-08, 0, 0.7, 0, 0, 0, 0.7, 0.158009, 0.109774, -0.704073 )

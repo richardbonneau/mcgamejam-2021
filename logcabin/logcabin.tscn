@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://palette/unshaded-main.material" type="Material" id=1]
 [ext_resource path="res://logcabin/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://logcabin/scripts/logcabin.gd" type="Script" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube005"
@@ -30,6 +31,7 @@ extents = Vector3( 0.119767, 1, 0.453237 )
 extents = Vector3( 0.121945, 1, 0.915147 )
 
 [node name="logcabin" type="Spatial"]
+script = ExtResource( 3 )
 
 [node name="Cube005" type="MeshInstance" parent="."]
 transform = Transform( -1.58261, -2.24267e-07, -5.21996e-07, 2.24267e-07, 1.0894, -1.14799, 5.21996e-07, -1.14799, -1.0894, -5.05706, 3.70137, 2.23297 )

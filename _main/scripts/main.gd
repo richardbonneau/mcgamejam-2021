@@ -7,7 +7,9 @@ onready var player_inventory = {
 onready var current_act = 1
 onready var player_messages = {
 	"electricbox_nokey": ["It seems like it requires some sort of key before I can operate it."],
-	"found_electricbox_key": ["You found the key to the Electric Box"]
+	"found_electricbox_key": ["You found the key to the Electric Box"],
+	"found_neighbour_house_key":["You found the neighbour's emergency key"],
+	"door_locked":["The door is locked"]
 }
 
 onready var acts = [

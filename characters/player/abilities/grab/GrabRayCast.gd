@@ -14,6 +14,7 @@ func _physics_process(delta):
 			"door":hud_text = "Use Door"
 			"electricbox": hud_text = "Trigger Power Switch"
 			"key": hud_text = "Pick up Key"
+			"key2": hud_text = "Pick up Key"
 			
 			"oven_element": hud_text = "Use Oven"
 			"oven_element2": hud_text = "Use Oven"
@@ -68,7 +69,7 @@ func _input(event):
 					"electricbox": get_collider().trigger_switch()
 					"celldoor": get_collider().trigger_door()
 					"key": get_collider().pickup_key()
-					
+					"key2": get_collider().pickup_key()
 					
 					"oven_element": get_collider().trigger_element()
 					"oven_element2": get_collider().trigger_element()
