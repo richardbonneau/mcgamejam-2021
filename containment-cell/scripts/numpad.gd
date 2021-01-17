@@ -1,9 +1,13 @@
 extends Spatial
 
 onready var code_entered = ""
-onready var celldoor = self.get_owner().get_node("Map/buildings/containment-cell/celldoor")
+onready var main = self.get_owner()
+onready var celldoor = main.get_node("Map/buildings/containment-cell/celldoor")
 
 func button_press(btn):
+	if !main.player_inventory.power_restored:
+		main.get_node("DialogueBox").talk(main.player_messages.power_not_restored,false)
+		return
 	if btn == "erase":
 		$wrong.play()
 		code_entered = ""

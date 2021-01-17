@@ -19,4 +19,5 @@ func trigger_switch():
 			switch_open = true
 		if steps == 2:
 			main.current_act = 5
+			main.player_inventory.power_restored = true
 

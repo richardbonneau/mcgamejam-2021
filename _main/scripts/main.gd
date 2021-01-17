@@ -4,7 +4,8 @@ onready var player_inventory = {
 	"electricbox_key":false,
 	"electricbox_key_2":false,
 	"neighbour_house_key":false,
-	"safe_key":false
+	"safe_key":false,
+	"power_restored": false
 }
 onready var current_act = 1
 onready var player_messages = {
@@ -16,7 +17,8 @@ onready var player_messages = {
 	"found_neighbour_house_key":["You found the neighbour's emergency key"],
 	"door_locked":["The door is locked"],
 	"check_on_girl":["She is asleep. There is a tube attached to her arm, she is probably sedated."],
-	"its_a_human_doll":["It's an oddly realistic looking human doll"]
+	"its_a_human_doll":["It's an oddly realistic looking human doll"],
+	"power_not_restored": ["There is an electrical problem with the NumPad Lock"]
 }
 
 onready var acts = [
