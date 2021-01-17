@@ -2,6 +2,7 @@ extends Spatial
 
 onready var player_inventory = {
 	"electricbox_key":false,
+	"electricbox_key_2":false,
 	"neighbour_house_key":false,
 	"safe_key":false
 }
@@ -10,6 +11,7 @@ onready var player_messages = {
 	"safe_nokey":["I need some kind of electronic key to open it"],
 	"electricbox_nokey": ["It seems like it requires some sort of key before I can operate it."],
 	"found_electricbox_key": ["You found the key to the Electric Box"],
+	"found_electricbox_key_2": ["You found the key to the Electric Box... Again."],
 	"found_electronic_key": ["You've found an Electronic Key"],
 	"found_neighbour_house_key":["You found the neighbour's emergency key"],
 	"door_locked":["The door is locked"],
@@ -26,7 +28,7 @@ onready var acts = [
 		"new_oldman_coordinates":null,
 		"new_neighbour_coordinates":null,
 		"ending":false,
-		"dialogues": ["Howdy youngster. What brings you around here?","You were on your way to your car and you got lost? You ain't the brightest fella are you?","Well, while you're here, could you do me a favor before you go?","It's really simple, the power is acting a bit strange lately. Could you go up to the power panel and turn it off and on again?","My granddaughter works in IT and she tells me that's how she fixes all of her problems."," Let me know when it's done!"]
+		"dialogues": ["Howdy youngster. What brings you around here?","You were on your way to your car and you got lost? You ain't the brightest fella are you?","Well, while you're here, could you do me a favor before you go?","It's really simple, the power is acting a bit strange lately. Could you go up to the power panel and turn it off and on again?","My granddaughter works in IT and she tells me that's how she fixes all of her problems."," Let me know when it's done."]
 	},
 	{
 		"num": 2,

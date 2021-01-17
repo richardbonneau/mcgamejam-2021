@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -37,6 +37,9 @@
 [ext_resource path="res://containment-cell/doll2.tscn" type="PackedScene" id=35]
 [ext_resource path="res://containment-cell/doll3.tscn" type="PackedScene" id=36]
 [ext_resource path="res://logcabin/safe.tscn" type="PackedScene" id=37]
+[ext_resource path="res://palette/power_light.tres" type="Material" id=38]
+
+[sub_resource type="CubeMesh" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 22.6935, 16.2297, 1 )
@@ -54,11 +57,15 @@ transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -41.87
 key_type = "electricbox_key"
 
 [node name="key3" parent="Map" instance=ExtResource( 32 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 21.7472, 1.00283, -40.9572 )
+transform = Transform( 0.478753, 0, 0.144207, 0, 0.5, 0, -0.144207, 0, 0.478753, 58.486, 0.163559, 64.6054 )
 key_type = "safe"
 
+[node name="key4" parent="Map" instance=ExtResource( 32 )]
+transform = Transform( 0.486457, 0, 0.115585, 0, 0.5, 0, -0.115585, 0, 0.486457, 57.3634, 1.08143, 61.401 )
+key_type = "electricbox_key_2"
+
 [node name="key2" parent="Map" instance=ExtResource( 32 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 80.9527, 0.185846, 52.0373 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 59.0537, -0.218988, 65.9633 )
 key_type = "neighbour_house_key"
 
 [node name="toilet" parent="Map" instance=ExtResource( 29 )]
@@ -377,6 +384,14 @@ transform = Transform( -1.14044e-08, -0.07, 0, -1.14044e-08, 1.85802e-15, -0.07,
 [node name="doll16" parent="Map/buildings/containment-cell" instance=ExtResource( 35 )]
 transform = Transform( -2.72309e-09, 0.0603308, 0.0354993, 0.07, -3.0598e-09, 1.05697e-08, 1.06614e-08, 0.0354993, -0.0603308, -1.91252, -0.312705, -1.29266 )
 
+[node name="commode-lit3" parent="Map/buildings/containment-cell" instance=ExtResource( 17 )]
+transform = Transform( -0.479998, 0, -4.1963e-08, 0, 0.48, 0, 4.19628e-08, 0, -0.480001, -1.99148, -0.336452, -4.76837e-07 )
+
+[node name="power_light" type="MeshInstance" parent="Map/buildings/containment-cell"]
+transform = Transform( 0.05, 0, -1.77636e-15, 0, 0.05, 0, 1.77636e-15, 0, 0.05, 2.60225, 0.598103, -1.03498 )
+mesh = SubResource( 2 )
+material/0 = ExtResource( 38 )
+
 [node name="fridge" parent="Map/buildings" instance=ExtResource( 22 )]
 transform = Transform( -3.0598e-08, 0, 0.7, 0, 0.7, 0, -0.7, 0, -3.0598e-08, -57.8411, 0.319586, 59.9955 )
 
@@ -403,7 +418,7 @@ transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 57.22
 is_neighbour_house = true
 
 [node name="neighbourbed" parent="Map/buildings/logcabin2" instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 8.9407e-08, 0, 0.7, 0, 0, 0, 0.7, 0.158009, 0.109774, -0.704073 )
+transform = Transform( 1, 0, 1.19209e-07, 0, 0.7, 0, 0, 0, 0.7, 0.158009, 0.109774, -0.704073 )
 
 [node name="fridge2" parent="Map/buildings/logcabin2" instance=ExtResource( 22 )]
 transform = Transform( -0.3, 1.5134e-09, -1.19209e-07, 0, 0.299974, 0.00393735, 1.04308e-07, 0.00393735, -0.299974, 0.494484, 0.180136, 1.22373 )
@@ -418,7 +433,7 @@ transform = Transform( -2.98023e-08, 0, 0.2, 0, 0.25, 0, -0.2, 0, -2.98023e-08, 
 transform = Transform( -8.9407e-08, 0, 0.5, 0, 1, 0, -0.5, 0, -8.9407e-08, -1.36202, -0.0699916, -1.19066 )
 
 [node name="commode-lit2" parent="Map/buildings/logcabin2" instance=ExtResource( 17 )]
-transform = Transform( -8.9407e-08, 0, 0.6, 0, 0.6, 0, -0.599997, 0, -8.9407e-08, -0.647205, 0, -1.18575 )
+transform = Transform( -8.9407e-08, 0, 0.6, 0, 0.6, 0, -0.599997, 0, -8.9407e-08, -0.73315, 0, -1.16592 )
 
 [node name="bureau" parent="Map/buildings" instance=ExtResource( 18 )]
 transform = Transform( -0.996829, 0, -0.159148, 0, 2, 0, 0.0795741, 0, -1.99366, 21.5876, 0.0247789, -41.4414 )
@@ -460,6 +475,10 @@ subject = "scp_report1"
 [node name="page4" parent="Map" instance=ExtResource( 25 )]
 transform = Transform( -0.9956, 0.00338983, -0.0936471, 9.25603e-08, 0.999345, 0.0361728, 0.0937088, 0.0360137, -0.994947, 21.637, 1.07774, -39.3382 )
 subject = "cell_code"
+
+[node name="page5" parent="Map" instance=ExtResource( 25 )]
+transform = Transform( -0.192727, -0.0354947, 0.980609, 9.25603e-08, 0.999345, 0.0361728, -0.981252, 0.00697162, -0.192601, 69.4209, 1.16466, 12.833 )
+subject = "scp_report3"
 
 [node name="page3" parent="Map" instance=ExtResource( 25 )]
 transform = Transform( -0.999735, -0.023014, -0.000468072, 0.0230188, -0.999528, -0.0203262, -6.5549e-08, -0.0203316, 0.999793, 55.9619, 1.07794, 60.5978 )

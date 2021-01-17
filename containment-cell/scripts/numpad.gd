@@ -18,3 +18,4 @@ func button_press(btn):
 		$beep.play()
 		code_entered += btn
 		print(code_entered)
+ 

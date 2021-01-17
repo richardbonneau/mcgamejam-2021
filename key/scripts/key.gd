@@ -20,5 +20,8 @@ func pickup_key():
 	elif key_type == "safe":
 		main.get_node("DialogueBox").talk(main.player_messages.found_electronic_key,false)
 		main.player_inventory.safe_key = true
+	elif key_type == "electricbox_key_2":
+		main.get_node("DialogueBox").talk(main.player_messages.found_electricbox_key_2,false)
+		main.player_inventory.electricbox_key_2 = true
 	self.queue_free()
 

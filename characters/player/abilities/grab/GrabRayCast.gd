@@ -16,6 +16,7 @@ func _physics_process(delta):
 			"key": hud_text = "Pick up Key"
 			"key2": hud_text = "Pick up Key"
 			"key3": hud_text = "Pick up Electronic Key"
+			"key4": hud_text = "Pick up Key"
 			"safedoor": hud_text = "Open Safe"
 			
 			"oven_element": hud_text = "Use Oven"
@@ -31,10 +32,11 @@ func _physics_process(delta):
 			"page2":hud_text = "Read"
 			"page3":hud_text = "Read"
 			"page4":hud_text = "Read"
+			"page5":hud_text = "Read"
 			
 			"oldman": hud_text = "Talk to Old Man"
 			"neighbour": hud_text = "Talk to Neighbour"
-			"girl": hud_text = "Sick Girl"
+			"girl": hud_text = "Sleeping Girl"
 			
 			"button0": hud_text = "0"
 			"button1": hud_text = "1"
@@ -94,6 +96,7 @@ func _input(event):
 					"key": get_collider().pickup_key()
 					"key2": get_collider().pickup_key()
 					"key3": get_collider().pickup_key()
+					"key4": get_collider().pickup_key()
 					"safedoor": get_collider().open_door()
 					
 					"oven_element": get_collider().trigger_element()
@@ -109,6 +112,7 @@ func _input(event):
 					"page2": get_collider().read_page()
 					"page3": get_collider().read_page()
 					"page4": get_collider().read_page()
+					"page5": get_collider().read_page()
 					
 					"oldman": get_collider().talk_to()
 					"neighbour": get_collider().talk_to()
