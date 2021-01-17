@@ -9,7 +9,9 @@ onready var player_messages = {
 	"electricbox_nokey": ["It seems like it requires some sort of key before I can operate it."],
 	"found_electricbox_key": ["You found the key to the Electric Box"],
 	"found_neighbour_house_key":["You found the neighbour's emergency key"],
-	"door_locked":["The door is locked"]
+	"door_locked":["The door is locked"],
+	"check_on_girl":["She is asleep"],
+	"its_a_human_doll":["It's an oddly realistic looking human doll"]
 }
 
 onready var acts = [

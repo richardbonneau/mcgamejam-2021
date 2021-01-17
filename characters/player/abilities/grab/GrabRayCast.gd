@@ -45,6 +45,25 @@ func _physics_process(delta):
 			"buttonok": hud_text = "Confirm"
 			"buttoncancel": hud_text = "Erase"
 			"exit": hud_text = "Leave?"
+			
+			"doll": hud_text = "Doll"
+			"doll2": hud_text = "Doll"
+			"doll3": hud_text = "Doll"
+			"doll4": hud_text = "Doll"
+			"doll5": hud_text = "Doll"
+			"doll6": hud_text = "Doll"
+			"doll7": hud_text = "Doll"
+			"doll8": hud_text = "Doll"
+			"doll9": hud_text = "Doll"
+			"doll10": hud_text = "Doll"
+			"doll11": hud_text = "Doll"
+			"doll13": hud_text = "Doll"
+			"doll14": hud_text = "Doll"
+			"doll15": hud_text = "Doll"
+			"doll16": hud_text = "Doll"
+			"doll17": hud_text = "Doll"
+			"doll18": hud_text = "Doll"
+			"doll19": hud_text = "Doll"
 			_: $crosshair.visible = false
 		
 		$crosshair/text.text = hud_text
@@ -85,7 +104,7 @@ func _input(event):
 					
 					"oldman": get_collider().talk_to()
 					"neighbour": get_collider().talk_to()
-					"girl": print("sick girl")
+					"girl": get_collider().check_on_girl()
 					
 					"button0": get_collider().get_owner().button_press("0")
 					"button1": get_collider().get_owner().button_press("1")
@@ -100,4 +119,21 @@ func _input(event):
 					"buttonok": get_collider().get_owner().button_press("confirm")
 					"buttoncancel": get_collider().get_owner().button_press("erase")
 					
-					
+					"doll": get_collider().its_a_human_doll()
+					"doll2": get_collider().its_a_human_doll()
+					"doll3": get_collider().its_a_human_doll()
+					"doll4": get_collider().its_a_human_doll()
+					"doll5": get_collider().its_a_human_doll()
+					"doll6": get_collider().its_a_human_doll()
+					"doll7": get_collider().its_a_human_doll()
+					"doll8": get_collider().its_a_human_doll()
+					"doll9": get_collider().its_a_human_doll()
+					"doll10": get_collider().its_a_human_doll()
+					"doll11": get_collider().its_a_human_doll()
+					"doll13":get_collider().its_a_human_doll()
+					"doll14": get_collider().its_a_human_doll()
+					"doll15":get_collider().its_a_human_doll()
+					"doll16": get_collider().its_a_human_doll()
+					"doll17": get_collider().its_a_human_doll()
+					"doll18": get_collider().its_a_human_doll()
+					"doll19": get_collider().its_a_human_doll()
