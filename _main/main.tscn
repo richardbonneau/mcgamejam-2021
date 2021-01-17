@@ -29,7 +29,7 @@
 [ext_resource path="res://characters/oldman.tscn" type="PackedScene" id=27]
 [ext_resource path="res://_main/scripts/main.gd" type="Script" id=28]
 [ext_resource path="res://logcabin/toilet.tscn" type="PackedScene" id=29]
-[ext_resource path="res://girl.tscn" type="PackedScene" id=30]
+[ext_resource path="res://characters/girl.tscn" type="PackedScene" id=30]
 [ext_resource path="res://_main/imports/mcgamejammusic6.wav" type="AudioStream" id=31]
 [ext_resource path="res://key/key.tscn" type="PackedScene" id=32]
 [ext_resource path="res://containment-cell/cell-bed.tscn" type="PackedScene" id=33]
@@ -39,9 +39,9 @@
 [ext_resource path="res://logcabin/safe.tscn" type="PackedScene" id=37]
 [ext_resource path="res://palette/power_light.tres" type="Material" id=38]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="CubeMesh" id=1]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=2]
 extents = Vector3( 22.6935, 16.2297, 1 )
 
 [node name="main" type="Spatial"]
@@ -389,7 +389,7 @@ transform = Transform( -0.479998, 0, -4.1963e-08, 0, 0.48, 0, 4.19628e-08, 0, -0
 
 [node name="power_light" type="MeshInstance" parent="Map/buildings/containment-cell"]
 transform = Transform( 0.05, 0, -1.77636e-15, 0, 0.05, 0, 1.77636e-15, 0, 0.05, 2.60225, 0.598103, -1.03498 )
-mesh = SubResource( 2 )
+mesh = SubResource( 1 )
 material/0 = ExtResource( 38 )
 
 [node name="fridge" parent="Map/buildings" instance=ExtResource( 22 )]
@@ -489,7 +489,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.7681, 0, -91.655 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Map/exit"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.027359 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="DialogueBox" type="NinePatchRect" parent="."]
 anchor_top = 1.0

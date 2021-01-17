@@ -17,4 +17,6 @@ func trigger_switch():
 		else:
 			$switch.rotation.x = atan2(0, 0.7)
 			switch_open = true
+		if steps == 2:
+			main.current_act = 5
 

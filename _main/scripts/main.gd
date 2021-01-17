@@ -81,7 +81,17 @@ onready var acts = [
 		"dialogues": ["Do it."]
 	},
 	{
-		"num": 4,
+		"num": 5,
+		"character":"oldman",
+		"complete": false,
+		"finishesAct":false,
+		"new_oldman_coordinates":null,
+		"new_neighbour_coordinates":null,
+		"ending":false,
+		"dialogues": ["My heater works again. Thank you! You can be on your way now ..."]
+	},
+	{
+		"num": 6,
 		"character":"neighbour",
 		"complete": false,
 		"finishesAct":true,
