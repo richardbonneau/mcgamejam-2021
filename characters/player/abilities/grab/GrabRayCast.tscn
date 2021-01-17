@@ -1,15 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://player/abilities/grab/GrabRayCast.gd" type="Script" id=1]
-[ext_resource path="res://palette/dot.png" type="Texture" id=2]
-[ext_resource path="res://palette/dialogue-font.tres" type="DynamicFont" id=3]
-[ext_resource path="res://palette/leftclick.tres" type="DynamicFont" id=4]
+[ext_resource path="res://palette/leftclick.tres" type="DynamicFont" id=1]
+[ext_resource path="res://palette/dialogue-font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://palette/dot.png" type="Texture" id=3]
+[ext_resource path="res://characters/player/abilities/grab/GrabRayCast.gd" type="Script" id=4]
 
 [node name="GrabRayCast" type="RayCast"]
 enabled = true
 cast_to = Vector3( 0, 0, -3 )
 collision_mask = 3
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="GrabbingPosition" type="Position3D" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
@@ -34,7 +34,7 @@ margin_left = -25.0
 margin_top = -25.0
 margin_right = 25.0
 margin_bottom = 25.0
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -45,7 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_top = -65.0569
 margin_bottom = -26.0569
-custom_fonts/font = ExtResource( 3 )
+custom_fonts/font = ExtResource( 2 )
 text = "Open Door"
 align = 1
 __meta__ = {
@@ -58,7 +58,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 margin_top = -89.8755
 margin_bottom = -50.8755
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
 text = "Click"
 align = 1
 valign = 1

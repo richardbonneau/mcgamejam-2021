@@ -18,11 +18,14 @@ func _physics_process(delta):
 			"oven_element3": hud_text = "Use Oven"
 			"oven_element4": hud_text = "Use Oven"
 			"toilet": hud_text = "Flush"
+			"toilet2": hud_text = "Flush"
 			"sink": hud_text = "Use Sink"
+			"sink2": hud_text = "Use Sink"
 			"page":hud_text = "Read"
 			"page2":hud_text = "Read"
 			"oldman": hud_text = "Talk to Old Man"
 			"neighbour": hud_text = "Talk to Neighbour"
+			"girl": hud_text = "Sick Girl"
 			"button0": hud_text = "0"
 			"button1": hud_text = "1"
 			"button2": hud_text = "2"
@@ -35,6 +38,7 @@ func _physics_process(delta):
 			"button9": hud_text = "9"
 			"buttonok": hud_text = "Confirm"
 			"buttoncancel": hud_text = "Erase"
+			"exit": hud_text = "Leave?"
 			_: $crosshair.visible = false
 		
 		$crosshair/text.text = hud_text
@@ -63,11 +67,14 @@ func _input(event):
 					"oven_element3": get_collider().trigger_element()
 					"oven_element4": get_collider().trigger_element()
 					"toilet": get_collider().flush()
+					"toilet2": get_collider().flush()
 					"sink": get_collider().trigger_sink()
+					"sink2": get_collider().trigger_sink()
 					"page": get_collider().read_page()
 					"page2": get_collider().read_page()
 					"oldman": get_collider().talk_to()
 					"neighbour": get_collider().talk_to()
+					"girl": print("sick girl")
 					"button0": get_collider().get_owner().button_press("0")
 					"button1": get_collider().get_owner().button_press("1")
 					"button2": get_collider().get_owner().button_press("2")
