@@ -17,6 +17,7 @@ func _physics_process(delta):
 			"oven_element2": hud_text = "Use Oven"
 			"oven_element3": hud_text = "Use Oven"
 			"oven_element4": hud_text = "Use Oven"
+			"toilet": hud_text = "Flush"
 			"page":hud_text = "Read"
 			"page2":hud_text = "Read"
 			"oldman": hud_text = "Talk to Old Man"
@@ -60,6 +61,7 @@ func _input(event):
 					"oven_element2": get_collider().trigger_element()
 					"oven_element3": get_collider().trigger_element()
 					"oven_element4": get_collider().trigger_element()
+					"toilet": get_collider().flush()
 					"page": get_collider().read_page()
 					"page2": get_collider().read_page()
 					"oldman": get_collider().talk_to()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://characters/neighbour.tscn" type="PackedScene" id=26]
 [ext_resource path="res://characters/oldman.tscn" type="PackedScene" id=27]
 [ext_resource path="res://_main/scripts/main.gd" type="Script" id=28]
+[ext_resource path="res://logcabin/toilet.tscn" type="PackedScene" id=29]
 
 [node name="main" type="Spatial"]
 script = ExtResource( 28 )
@@ -36,6 +37,9 @@ script = ExtResource( 28 )
 transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 49.8556, 6.09922, 53.3428 )
 
 [node name="Map" type="Spatial" parent="."]
+
+[node name="toilet" parent="Map" instance=ExtResource( 29 )]
+transform = Transform( -0.422051, 0, -0.558456, 0, 0.7, 0, 0.558456, 0, -0.422051, 54.0969, 0.121685, 59.25 )
 
 [node name="terrain" parent="Map" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104817, -0.019558, -0.149257 )
@@ -89,6 +93,12 @@ transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -60.5997, -0.28275, -49.
 
 [node name="sapin11" parent="Map/Nature" instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 38.7661, -0.28275, -76.3108 )
+
+[node name="sapin27" parent="Map/Nature" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 49.8399, -0.28275, -45.6561 )
+
+[node name="sapin28" parent="Map/Nature" instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 46.8412, -0.28275, -19.2897 )
 
 [node name="sapin12" parent="Map/Nature" instance=ExtResource( 3 )]
 transform = Transform( 0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 27.5992, -0.28275, -60.9991 )
@@ -228,11 +238,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5284, -0.107569, 5.78309 )
 [node name="rock25" parent="Map/Nature" instance=ExtResource( 12 )]
 transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 40.5284, -0.10757, 12.1265 )
 
+[node name="rock28" parent="Map/Nature" instance=ExtResource( 12 )]
+transform = Transform( 2, 0, 0, 0, 1.07413, 1.68708, 0, -1.68708, 1.07413, 40.5284, -0.10757, 47.0467 )
+
 [node name="rock21" parent="Map/Nature" instance=ExtResource( 12 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77.1307, 0.584062, -53.0526 )
 
 [node name="rock22" parent="Map/Nature" instance=ExtResource( 12 )]
 transform = Transform( 0.0199129, 0, -0.999802, 0, 1, 0, 0.999802, 0, 0.0199129, 77.1307, 0.584062, -26.0884 )
+
+[node name="rock26" parent="Map/Nature" instance=ExtResource( 12 )]
+transform = Transform( 0.0199129, 0, -0.999802, 0, 1, 0, 0.999802, 0, 0.0199129, 48.4082, 0.584062, -35.589 )
+
+[node name="rock27" parent="Map/Nature" instance=ExtResource( 12 )]
+transform = Transform( -0.00124029, 0.998058, 0.0622732, -0.0198742, -0.0622855, 0.997861, 0.999802, 0, 0.0199129, 52.8435, 0.584061, -35.589 )
 
 [node name="rock23" parent="Map/Nature" instance=ExtResource( 12 )]
 transform = Transform( 0.0151798, 0.299607, 0.00227027, 0.151598, -0.00964112, 0.258699, 0.258433, -0.0119428, -0.151888, 72.8101, 0.31392, -26.7097 )
