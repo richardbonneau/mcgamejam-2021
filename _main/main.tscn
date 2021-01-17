@@ -327,7 +327,7 @@ transform = Transform( 0.368645, 0, 0, 0, 0.378293, 0.925686, 0, -0.552861, 0.22
 transform = Transform( -2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 64.5062, 1.05648, 12.8872 )
 
 [node name="cell-bed" parent="Map/buildings/containment-cell" instance=ExtResource( 33 )]
-transform = Transform( -0.5, 0, -1.62921e-07, 0, 0.5, 0, 1.62921e-07, 0, -0.5, -1.95367, 0, 1.09407 )
+transform = Transform( -0.5, 0, -1.62921e-07, 0, 0.5, 0, 1.62921e-07, 0, -0.5, -1.95367, 0, 1.66785 )
 
 [node name="doll" parent="Map/buildings/containment-cell" instance=ExtResource( 34 )]
 transform = Transform( 0.05, 7.54978e-09, 3.30011e-16, 0, -2.18557e-09, 0.05, 7.54978e-09, -0.05, -2.18557e-09, -0.922419, -0.321459, 0 )
@@ -339,7 +339,7 @@ transform = Transform( -0.0362363, 0.0344519, 1.50594e-09, 0, -2.18557e-09, 0.05
 transform = Transform( -0.0235514, -0.0441059, -1.92793e-09, 0, -2.18557e-09, 0.05, -0.0441059, 0.0235514, 1.02946e-09, -1.71517, -0.321459, 1.91104 )
 
 [node name="doll4" parent="Map/buildings/containment-cell" instance=ExtResource( 34 )]
-transform = Transform( -0.0235514, -0.0441059, -1.92793e-09, 0, -2.18557e-09, 0.05, -0.0441059, 0.0235514, 1.02946e-09, -1.9581, 0.108545, 0.659054 )
+transform = Transform( -0.0235514, -0.0441059, -1.92793e-09, 0, -2.18557e-09, 0.05, -0.0441059, 0.0235514, 1.02946e-09, -1.9581, 0.108545, 1.19145 )
 
 [node name="doll5" parent="Map/buildings/containment-cell" instance=ExtResource( 34 )]
 transform = Transform( -0.0235514, -0.0441059, -1.92793e-09, 0, -2.18557e-09, 0.05, -0.0441059, 0.0235514, 1.02946e-09, -1.9581, -0.319709, -0.758964 )
@@ -387,7 +387,7 @@ transform = Transform( -1.14044e-08, -0.07, 0, -1.14044e-08, 1.85802e-15, -0.07,
 transform = Transform( -2.72309e-09, 0.0603308, 0.0354993, 0.07, -3.0598e-09, 1.05697e-08, 1.06614e-08, 0.0354993, -0.0603308, -1.91252, -0.312705, -1.29266 )
 
 [node name="commode-lit3" parent="Map/buildings/containment-cell" instance=ExtResource( 17 )]
-transform = Transform( -0.479998, 0, -4.1963e-08, 0, 0.48, 0, 4.19628e-08, 0, -0.480001, -1.99148, -0.336452, -4.76837e-07 )
+transform = Transform( -0.232253, 0, -0.42007, 0, 0.48, 0, 0.420067, 0, -0.232255, -1.43418, -0.336452, 2.07348 )
 
 [node name="power_light" type="MeshInstance" parent="Map/buildings/containment-cell"]
 transform = Transform( 0.05, 0, -1.77636e-15, 0, 0.05, 0, 1.77636e-15, 0, 0.05, 2.60225, 0.598103, -1.03498 )
@@ -464,7 +464,7 @@ transform = Transform( -0.999267, -0.00350767, -0.0381261, -0.00350302, 0.999994
 transform = Transform( 0.0665875, 0, 0.997781, 0, 1, 0, -0.997781, 0, 0.0665875, -55.2526, -0.308352, 56.8682 )
 
 [node name="girl" parent="Map/people" instance=ExtResource( 30 )]
-transform = Transform( 0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 69.1006, 1.3839, 10.5887 )
+transform = Transform( 0.7, 0, 0, 0, -3.0598e-08, 0.7, 0, -0.7, -3.0598e-08, 69.1006, 1.3839, 9.15425 )
 
 [node name="page" parent="Map" instance=ExtResource( 25 )]
 transform = Transform( -1, 9.57148e-08, -8.54763e-08, 8.74047e-08, 0.0203316, -0.999793, -9.39572e-08, -0.999793, -0.0203316, 35.4808, 1.65153, -2.3888 )
@@ -479,7 +479,7 @@ transform = Transform( -0.0717587, -0.0360796, 0.996768, 9.25603e-08, 0.999345, 
 subject = "cell_code"
 
 [node name="page5" parent="Map" instance=ExtResource( 25 )]
-transform = Transform( -0.192727, -0.0354947, 0.980609, 9.25603e-08, 0.999345, 0.0361728, -0.981252, 0.00697162, -0.192601, 69.4209, 1.16466, 12.833 )
+transform = Transform( -0.95199, -0.0110734, 0.305927, 9.25603e-08, 0.999345, 0.0361728, -0.306127, 0.0344363, -0.951366, 68.0132, 1.16466, 7.73329 )
 subject = "scp_report3"
 
 [node name="page3" parent="Map" instance=ExtResource( 25 )]
