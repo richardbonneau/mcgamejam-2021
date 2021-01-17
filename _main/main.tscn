@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://containment-cell/doll3.tscn" type="PackedScene" id=36]
 [ext_resource path="res://logcabin/safe.tscn" type="PackedScene" id=37]
 [ext_resource path="res://palette/power_light.tres" type="Material" id=38]
+[ext_resource path="res://_main/scripts/exit.gd" type="Script" id=39]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -48,7 +49,7 @@ extents = Vector3( 22.6935, 16.2297, 1 )
 script = ExtResource( 28 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -0.984078, 0, -0.177737, 0, 1, 0, 0.177737, 0, -0.984078, 34.3508, 6.09922, -36.3865 )
+transform = Transform( 0.999834, 0, 0.0182374, 0, 1, 0, -0.0182374, 0, 0.999834, -49.0247, 2.16204, -82.9807 )
 
 [node name="Map" type="Spatial" parent="."]
 
@@ -418,7 +419,7 @@ transform = Transform( 1.62064, 0, -1.17198, 0, 2, 0, 1.17198, 0, 1.62064, 57.22
 is_neighbour_house = true
 
 [node name="neighbourbed" parent="Map/buildings/logcabin2" instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 1.19209e-07, 0, 0.7, 0, 0, 0, 0.7, 0.158009, 0.109774, -0.704073 )
+transform = Transform( 1, 0, 1.19209e-07, 0, 0.7, 0, 0, 0, 0.7, -0.00928116, 0.109774, -0.695246 )
 
 [node name="fridge2" parent="Map/buildings/logcabin2" instance=ExtResource( 22 )]
 transform = Transform( -0.3, 1.5134e-09, -1.19209e-07, 0, 0.299974, 0.00393735, 1.04308e-07, 0.00393735, -0.299974, 0.494484, 0.180136, 1.22373 )
@@ -486,6 +487,7 @@ subject = "scp_report2"
 
 [node name="exit" type="StaticBody" parent="Map"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.7681, 0, -91.655 )
+script = ExtResource( 39 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Map/exit"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.027359 )
@@ -497,7 +499,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 margin_left = -280.0
-margin_top = -200.0
+margin_top = -210.0
 margin_right = 280.0
 margin_bottom = -20.0
 texture = ExtResource( 10 )

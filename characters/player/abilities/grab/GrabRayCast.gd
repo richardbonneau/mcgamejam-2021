@@ -19,6 +19,7 @@ func _physics_process(delta):
 			"key4": hud_text = "Pick up Key"
 			"safedoor": hud_text = "Open Safe"
 			
+			
 			"oven_element": hud_text = "Use Oven"
 			"oven_element2": hud_text = "Use Oven"
 			"oven_element3": hud_text = "Use Oven"
@@ -98,6 +99,7 @@ func _input(event):
 					"key3": get_collider().pickup_key()
 					"key4": get_collider().pickup_key()
 					"safedoor": get_collider().open_door()
+					"exit": get_collider().trying_to_leave()
 					
 					"oven_element": get_collider().trigger_element()
 					"oven_element2": get_collider().trigger_element()

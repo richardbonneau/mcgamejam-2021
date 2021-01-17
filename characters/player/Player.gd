@@ -5,7 +5,7 @@ onready var player_can_move = true
 var mouse_sensitivity = 1
 
 var walk_speed = 10
-var sprint_multiplier = 5
+var sprint_multiplier = 1.5
 var crouch_multiplier = 0.5
 
 var ground_acceleration = 8

@@ -9,8 +9,9 @@ onready var player_inventory = {
 }
 onready var current_act = 1
 onready var player_messages = {
+	"trying_to_leave":["Something doesn't sit right with this place. I want to make sure there's nothing I should report to the police."],
 	"safe_nokey":["I need some kind of electronic key to open it"],
-	"electricbox_nokey": ["It seems like it requires some sort of key before I can operate it."],
+	"electricbox_nokey": ["It requires some sort of key before I can operate it."],
 	"found_electricbox_key": ["You found the key to the Electric Box"],
 	"found_electricbox_key_2": ["You found the key to the Electric Box... Again."],
 	"found_electronic_key": ["You've found an Electronic Key"],

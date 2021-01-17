@@ -35,5 +35,7 @@ func _physics_process(delta):
 		var distance_to_dest = offset.length()
 		print("distance_to_dest ",distance_to_dest)
 		move_and_slide(offset.normalized() * 45 * delta)
-		if distance_to_dest > 6.5: ending = false
+		if distance_to_dest > 6.5: 
+			ending = false
+			get_tree().change_scene("res://_menu/the_end.tscn")
 	

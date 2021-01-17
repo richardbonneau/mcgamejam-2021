@@ -26,6 +26,9 @@ func read_page():
 			$page_ui/handwriting.visible = false
 			$page_ui/typewriting.visible = true
 		"cell_code":
+			self.get_owner().get_node("Map/buildings/numpad").code_entered = ""
+			$page_ui/handwriting.visible = true
+			$page_ui/typewriting.visible = false
 			text_on_page = "It needed to be symbolic. I chose 1997 because it's the year that I lost my wife to my daughter's desease."
 	$page_ui.visible = true
 	$page_ui/handwriting.text = text_on_page

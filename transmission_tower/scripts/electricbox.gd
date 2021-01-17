@@ -20,4 +20,5 @@ func trigger_switch():
 		if steps == 2:
 			main.current_act = 5
 			main.player_inventory.power_restored = true
+			main.get_node("Map/buildings/containment-cell/power_light").get_surface_material(0).albedo_color = "#6A8D73"
 

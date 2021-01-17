@@ -24,12 +24,12 @@ extents = Vector3( 0.0995773, 1.07718, 1 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.001, 0.839362, 2.61006 )
 
-[sub_resource type="BoxShape" id=6]
+[sub_resource type="BoxShape" id=4]
 extents = Vector3( 0.114519, 1, 1.30541 )
 
-[sub_resource type="CubeMesh" id=4]
+[sub_resource type="CubeMesh" id=5]
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 0.0632637, 1, 0.686993 )
 
 [node name="containment-cell" type="StaticBody"]
@@ -62,7 +62,7 @@ shape = SubResource( 3 )
 
 [node name="end_game" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0.6, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="celldoor" type="KinematicBody" parent="."]
 collision_layer = 1024
@@ -71,9 +71,9 @@ script = ExtResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="celldoor"]
 transform = Transform( 0.0368474, 0, 0, 0, 1, 0, 0, 0, 0.702462, 2.52841, 0.543684, 0 )
-mesh = SubResource( 4 )
+mesh = SubResource( 5 )
 material/0 = ExtResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="celldoor"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54382, 0.643, 0 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
