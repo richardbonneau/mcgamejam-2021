@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://terrain/base_terrain/mcgamejamterraindea.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logcabin/logcabin.tscn" type="PackedScene" id=2]
@@ -6,10 +6,10 @@
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://terrain/nature/no-foliage-tree2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://transmission_tower/transmission-tower.tscn" type="PackedScene" id=6]
-[ext_resource path="res://addons/adbox/DialogueBox.gd" type="Script" id=7]
+[ext_resource path="res://_addons/adbox/DialogueBox.gd" type="Script" id=7]
 [ext_resource path="res://dialogues/beep.wav" type="AudioStream" id=8]
 [ext_resource path="res://palette/dialogue-font.tres" type="DynamicFont" id=9]
-[ext_resource path="res://resources/style/Style02.png" type="Texture" id=10]
+[ext_resource path="res://_addons/resources/style/Style02.png" type="Texture" id=10]
 [ext_resource path="res://terrain/small_props/branche2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://terrain/small_props/rock2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://terrain/small_props/rock.tscn" type="PackedScene" id=13]
@@ -40,6 +40,9 @@
 [ext_resource path="res://palette/power_light.tres" type="Material" id=38]
 [ext_resource path="res://_main/scripts/exit.gd" type="Script" id=39]
 [ext_resource path="res://terrain/small_props/branche.tscn" type="PackedScene" id=40]
+[ext_resource path="res://_main/SOME-TREE.tscn" type="PackedScene" id=41]
+
+
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -704,5 +707,8 @@ __meta__ = {
 stream = ExtResource( 31 )
 volume_db = -9.088
 autoplay = true
+
+[node name="SOME-TREE" parent="." instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.9996, -12.3202, -35 )
 [connection signal="dialogue_exit" from="DialogueBox" to="." method="_on_DialogueBox_dialogue_exit"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
