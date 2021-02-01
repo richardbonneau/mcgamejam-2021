@@ -69,7 +69,7 @@ onready var end_game = false
 signal dialogue_exit()
 
 func _enter_tree():
-	TextBox = load("res://addons/adbox/textbox.tscn").instance()
+	TextBox = load("res://_addons/adbox/textbox.tscn").instance()
 	TextBox.add_font_override("normal_font", font)
 	
 	var container = Container.new()
